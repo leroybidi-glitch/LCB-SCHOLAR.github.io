@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LCB-SCHOLAR - Accompagnement complet pour les bourses d'études en Chine. Study in China with full scholarship support.">
+    <title>LCB-SCHOLAR - Bourses d'Études en Chine | Scholarships in China</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Toggle Button -->
+    <div class="language-toggle">
+        <button id="langToggle" class="lang-btn">
+            <i class="fas fa-globe"></i>
+            <span id="currentLang">FR</span> / <span id="alternateLang">EN</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://www.genspark.ai/api/files/s/nfwJxH7L" alt="LCB-SCHOLAR Logo">
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                        <li><a href="#about" data-fr="À Propos" data-en="About">À Propos</a></li>
+                        <li><a href="#process" data-fr="Processus" data-en="Process">Processus</a></li>
+                        <li><a href="#universities" data-fr="Universités" data-en="Universities">Universités</a></li>
+                        <li><a href="#faq" data-fr="FAQ" data-en="FAQ">FAQ</a></li>
+                        <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title" data-fr="Étudier en Chine, Réaliser vos Rêves 🎓🇨🇳" data-en="Study in China, Achieve Your Dreams 🎓🇨🇳">
+                    Étudier en Chine, Réaliser vos Rêves 🎓🇨🇳
+                </h1>
+                <p class="hero-subtitle" 
+                   data-fr="Accompagnement complet de A à Z pour vos bourses d'études en Chine (Licence, Master, Doctorat, Année de langue)" 
+                   data-en="Complete A to Z support for your scholarships in China (Bachelor, Master, PhD, Language Year)">
+                    Accompagnement complet de A à Z pour vos bourses d'études en Chine (Licence, Master, Doctorat, Année de langue)
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary" data-fr="Postuler Maintenant" data-en="Apply Now">Postuler Maintenant</a>
+                    <a href="#about" class="btn btn-secondary" data-fr="En Savoir Plus" data-en="Learn More">En Savoir Plus</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p data-fr="Étudiants Accompagnés" data-en="Students Supported">Étudiants Accompagnés</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>95%</h3>
+                        <p data-fr="Taux de Succès" data-en="Success Rate">Taux de Succès</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p data-fr="Universités Partenaires" data-en="Partner Universities">Universités Partenaires</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-fr="Pourquoi Choisir LCB-SCHOLAR ?" data-en="Why Choose LCB-SCHOLAR?">Pourquoi Choisir LCB-SCHOLAR ?</h2>
+                <p data-fr="Votre partenaire de confiance pour étudier en Chine" data-en="Your trusted partner to study in China">Votre partenaire de confiance pour étudier en Chine</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 data-fr="Accompagnement Complet" data-en="Full Support">Accompagnement Complet</h3>
+                    <p data-fr="De la constitution du dossier jusqu'à votre installation en Chine : Dossier → Admission → Visa → Voyage" 
+                       data-en="From application to your arrival in China: Application → Admission → Visa → Travel">
+                        De la constitution du dossier jusqu'à votre installation en Chine : Dossier → Admission → Visa → Voyage
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-fr="Procédure Transparente" data-en="Transparent Process">Procédure Transparente</h3>
+                    <p data-fr="Nous travaillons directement avec des universités et partenaires officiels en Chine. Pas de promesses en l'air." 
+                       data-en="We work directly with universities and official partners in China. No empty promises.">
+                        Nous travaillons directement avec des universités et partenaires officiels en Chine. Pas de promesses en l'air.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-fr="Maximisation des Chances" data-en="Maximize Your Chances">Maximisation des Chances</h3>
+                    <p data-fr="Plusieurs candidatures dans différentes universités pour garantir votre admission et maximiser vos opportunités." 
+                       data-en="Multiple applications to different universities to ensure your admission and maximize your opportunities.">
+                        Plusieurs candidatures dans différentes universités pour garantir votre admission et maximiser vos opportunités.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 data-fr="Présence en Chine" data-en="Based in China">Présence en Chine</h3>
+                    <p data-fr="Équipe professionnelle basée à Guangzhou, Chine. Support 24/7 pour vous accompagner sur place." 
+                       data-en="Professional team based in Guangzhou, China. 24/7 support to assist you on-site.">
+                        Équipe professionnelle basée à Guangzhou, Chine. Support 24/7 pour vous accompagner sur place.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-fr="Comment Ça Marche ?" data-en="How Does It Work?">Comment Ça Marche ?</h2>
+                <p data-fr="6 étapes simples vers votre rêve chinois" data-en="6 simple steps to your Chinese dream">6 étapes simples vers votre rêve chinois</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-fr="Dépôt du Dossier" data-en="Application Submission">Dépôt du Dossier</h3>
+                        <p data-fr="Envoyez-nous vos documents académiques et administratifs. Acompte de 7200¥ pour ouvrir votre dossier et démarrer la procédure." 
+                           data-en="Send us your academic and administrative documents. Deposit of ¥7200 to open your file and start the process.">
+                            Envoyez-nous vos documents académiques et administratifs. Acompte de 7200¥ pour ouvrir votre dossier et démarrer la procédure.
+                        </p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-fr="Analyse & Orientation" data-en="Analysis & Guidance">Analyse & Orientation</h3>
+                        <p data-fr="Nous étudions votre profil et vous proposons les universités et bourses les mieux adaptées à vos objectifs." 
+                           data-en="We study your profile and offer you the universities and scholarships best suited to your goals.">
+                            Nous étudions votre profil et vous proposons les universités et bourses les mieux adaptées à vos objectifs.
+                        </p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-fr="Soumission Officielle" data-en="Official Submission">Soumission Officielle</h3>
+                        <p data-fr="Nous envoyons votre candidature complète aux universités partenaires sélectionnées pour vous." 
+                           data-en="We send your complete application to the selected partner universities for you.">
+                            Nous envoyons votre candidature complète aux universités partenaires sélectionnées pour vous.
+                        </p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-fr="Attente des Résultats" data-en="Waiting for Results">Attente des Résultats</h3>
+                        <p data-fr="Délai de réponse : 2 à 6 semaines selon l'université et le type de bourse. Nous assurons le suivi." 
+                           data-en="Response time: 2 to 6 weeks depending on the university and scholarship type. We ensure follow-up.">
+                            Délai de réponse : 2 à 6 semaines selon l'université et le type de bourse. Nous assurons le suivi.
+                        </p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3 data-fr="Documents Officiels" data-en="Official Documents">Documents Officiels</h3>
+                        <p data-fr="Réception de votre lettre d'admission 🎓 et formulaire JW202/JW201 (indispensable pour le visa)." 
+                           data-en="Receipt of your admission letter 🎓 and JW202/JW201 form (required for visa).">
+                            Réception de votre lettre d'admission 🎓 et formulaire JW202/JW201 (indispensable pour le visa).
+                        </p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3 data-fr="Préparation au Départ" data-en="Departure Preparation">Préparation au Départ ✈️</h3>
+                        <p data-fr="Entretien visa, achat du billet, briefing avant votre arrivée en Chine. Nous vous accompagnons jusqu'au bout !" 
+                           data-en="Visa interview, ticket purchase, briefing before your arrival in China. We support you all the way!">
+                            Entretien visa, achat du billet, briefing avant votre arrivée en Chine. Nous vous accompagnons jusqu'au bout !
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scholarships Section -->
+    <section class="scholarships">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-fr="Types de Bourses & Frais" data-en="Scholarship Types & Fees">Types de Bourses & Frais</h2>
+                <p data-fr="Après les 7200¥ d'ouverture de dossier, les frais finaux dépendent du type de bourse obtenue" 
+                   data-en="After the ¥7200 application fee, the final fees depend on the type of scholarship obtained">
+                    Après les 7200¥ d'ouverture de dossier, les frais finaux dépendent du type de bourse obtenue
+                </p>
+            </div>
+            <div class="scholarships-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th data-fr="Type de Bourse" data-en="Scholarship Type">Type de Bourse</th>
+                            <th data-fr="Ce qui est Couvert" data-en="What's Covered">Ce qui est Couvert</th>
+                            <th data-fr="Frais Finaux" data-en="Final Fees">Frais Finaux</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong data-fr="Bourse Complète" data-en="Full Scholarship">Bourse Complète</strong></td>
+                            <td data-fr="Logement + pension + santé + subsistance" data-en="Housing + board + health + subsistence">Logement + pension + santé + subsistance</td>
+                            <td><strong>18,870¥</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong data-fr="Bourse Partielle – 1er degré" data-en="Partial Scholarship – 1st Degree">Bourse Partielle – 1er degré</strong></td>
+                            <td data-fr="Logement + pension" data-en="Housing + board">Logement + pension</td>
+                            <td><strong>16,650¥</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong data-fr="Bourse Partielle – 2e degré" data-en="Partial Scholarship – 2nd Degree">Bourse Partielle – 2e degré</strong></td>
+                            <td data-fr="Pension uniquement" data-en="Board only">Pension uniquement</td>
+                            <td><strong>14,650¥</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong data-fr="Programme de Langue" data-en="Language Program">Programme de Langue</strong></td>
+                            <td data-fr="Aucun frais couvert" data-en="No fees covered">Aucun frais couvert</td>
+                            <td><strong>12,600¥</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong data-fr="Bourse Conditionnelle" data-en="Conditional Scholarship">Bourse Conditionnelle</strong></td>
+                            <td data-fr="50% de la pension" data-en="50% of board">50% de la pension</td>
+                            <td><strong>10,870¥</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="scholarship-note">
+                <i class="fas fa-info-circle"></i>
+                <p data-fr="Ces frais couvrent la finalisation de vos documents officiels, la garantie de votre inscription et nos frais de service." 
+                   data-en="These fees cover the finalization of your official documents, your registration guarantee, and our service fees.">
+                    Ces frais couvrent la finalisation de vos documents officiels, la garantie de votre inscription et nos frais de service.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section class="documents">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-fr="Documents Requis" data-en="Required Documents">Documents Requis</h2>
+                <p data-fr="Préparez votre dossier pour maximiser vos chances" data-en="Prepare your file to maximize your chances">Préparez votre dossier pour maximiser vos chances</p>
+            </div>
+            <div class="documents-grid">
+                <div class="document-category">
+                    <h3 data-fr="📚 Pour Licence & Master – Obligatoires" data-en="📚 For Bachelor & Master – Mandatory">📚 Pour Licence & Master – Obligatoires</h3>
+                    <ul>
+                        <li data-fr="Formulaire de demande LCB Scholar (fourni par nous)" data-en="LCB Scholar application form (provided by us)">Formulaire de demande LCB Scholar (fourni par nous)</li>
+                        <li data-fr="Passeport valide ≥ 1 an (scan couleur, bien lisible)" data-en="Valid passport ≥ 1 year (color scan, clearly legible)">Passeport valide ≥ 1 an (scan couleur, bien lisible)</li>
+                        <li data-fr="Photo d'identité fond blanc (format passeport)" data-en="White background ID photo (passport format)">Photo d'identité fond blanc (format passeport)</li>
+                        <li data-fr="Certificat médical officiel" data-en="Official medical certificate">Certificat médical officiel</li>
+                        <li data-fr="Lettre de motivation claire et convaincante" data-en="Clear and convincing cover letter">Lettre de motivation claire et convaincante</li>
+                        <li data-fr="Au moins 1 lettre de recommandation" data-en="At least 1 letter of recommendation">Au moins 1 lettre de recommandation</li>
+                        <li data-fr="Casier judiciaire récent (< 6 mois)" data-en="Recent criminal record (< 6 months)">Casier judiciaire récent (< 6 mois)</li>
+                        <li data-fr="Paiement des frais d'ouverture (7200¥)" data-en="Payment of opening fees (¥7200)">Paiement des frais d'ouverture (7200¥)</li>
+                    </ul>
+                </div>
+                <div class="document-category">
+                    <h3 data-fr="🎓 Spécifique Licence" data-en="🎓 Bachelor Specific">🎓 Spécifique Licence</h3>
+                    <ul>
+                        <li data-fr="Diplôme du Bac ou attestation provisoire" data-en="High school diploma or provisional certificate">Diplôme du Bac ou attestation provisoire</li>
+                        <li data-fr="Relevés de notes (2nde → Terminale)" data-en="Transcripts (Grade 10 → Grade 12)">Relevés de notes (2nde → Terminale)</li>
+                        <li data-fr="Âge recommandé : 17–25 ans" data-en="Recommended age: 17–25 years">Âge recommandé : 17–25 ans</li>
+                    </ul>
+                </div>
+                <div class="document-category">
+                    <h3 data-fr="🎓 Spécifique Master" data-en="🎓 Master Specific">🎓 Spécifique Master</h3>
+                    <ul>
+                        <li data-fr="Diplôme Licence (Bac+3 ou équivalent)" data-en="Bachelor's degree (Bac+3 or equivalent)">Diplôme Licence (Bac+3 ou équivalent)</li>
+                        <li data-fr="Relevés complets de Licence" data-en="Complete Bachelor transcripts">Relevés complets de Licence</li>
+                        <li data-fr="Âge recommandé : 21–35 ans" data-en="Recommended age: 21–35 years">Âge recommandé : 21–35 ans</li>
+                    </ul>
+                </div>
+                <div class="document-category bonus">
+                    <h3 data-fr="📎 Bonus (si disponibles – augmente vos chances)" data-en="📎 Bonus (if available – increases your chances)">📎 Bonus (si disponibles – augmente vos chances)</h3>
+                    <ul>
+                        <li data-fr="Certificat HSK (chinois) ou IELTS/TOEFL (anglais)" data-en="HSK (Chinese) or IELTS/TOEFL (English) certificate">Certificat HSK (chinois) ou IELTS/TOEFL (anglais)</li>
+                        <li data-fr="Attestation de stage ou travail" data-en="Internship or work certificate">Attestation de stage ou travail</li>
+                        <li data-fr="Certificat de bénévolat ou leadership" data-en="Volunteer or leadership certificate">Certificat de bénévolat ou leadership</li>
+                        <li data-fr="Portfolio pour filières artistiques" data-en="Portfolio for artistic fields">Portfolio pour filières artistiques</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Universities Section -->
+    <section class="universities" id="universities">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-fr="Nos Universités Partenaires" data-en="Our Partner Universities">Nos Universités Partenaires</h2>
+                <p data-fr="De prestigieuses institutions chinoises vous accueillent" data-en="Prestigious Chinese institutions welcome you">De prestigieuses institutions chinoises vous accueillent</p>
+            </div>
+
+            <!-- Top Tier Universities -->
+            <div class="university-category">
+                <h3 class="category-title" data-fr="🏆 Universités de Haut Niveau (Top Tier)" data-en="🏆 Top Tier Universities">🏆 Universités de Haut Niveau (Top Tier)</h3>
+                <div class="universities-grid">
+                    <div class="university-card">
+                        <div class="university-image">
+                            <img src="https://sspark.genspark.ai/cfimages?u1=i9IU9y%2FKMrz10C8mlVMVyPWTk17znKHoYwC2dd1nZDYUCnr9QVLdPR1cyJp0%2FF%2B%2F7VXYdOUV8iso1R8M4dbqmMC6pg82jjQtPTp%2FZT6FgjspAkDmGEdZ4HZYmySyoKQsBXRwOzC03hEZNbcCX3EnUPNOiTdO%2FVtJOtQp5M7JNsPv&u2=gZxGGC%2FGj7Guy7gv&width=2560" alt="Tsinghua University">
+                            <div class="university-badge">
+                                <span>#12</span>
+                                <small data-fr="Mondial" data-en="World">Mondial</small>
+                            </div>
+                        </div>
+                        <div class="university-content">
+                            <h4>Tsinghua University</h4>
+                            <p class="university-location"><i class="fas fa-map-marker-alt"></i> Beijing, China</p>
+                            <p class="university-desc" 
+                               data-fr="Université de recherche publique de renommée mondiale, leader en sciences et technologies. Surnommée le 'MIT chinois'." 
+                               data-en="World-renowned public research university, leader in science and technology. Nicknamed the 'Chinese MIT'.">
+                                Université de recherche publique de renommée mondiale, leader en sciences et technologies. Surnommée le "MIT chinois".
+                            </p>
+                            <div class="university-specs">
+                                <span class="spec-tag" data-fr="Ingénierie" data-en="Engineering">Ingénierie</span>
+                                <span class="spec-tag" data-fr="Technologie" data-en="Technology">Technologie</span>
+                                <span class="spec-tag" data-fr="Sciences" data-en="Sciences">Sciences</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="university-card">
+                        <div class="university-image">
+                            <img src="https://sspark.genspark.ai/cfimages?u1=0OrJvklkAhSPHxkKPD15hbCv7cHjl1943ZWCsGE1wWxO7k6z4dREMxZuSDBL2Oe2MIzYeVk58piL5QnpH%2F0hwuLetgzza%2Btd1CR6BMhN6YGlL%2FvsV75ZaDHuIQ35wr9OsMni&u2=h7c%2BscNgQvnlnaE%2B&width=2560" alt="Peking University">
+                            <div class="university-badge">
+                                <span>#13</span>
+                                <small data-fr="Mondial" data-en="World">Mondial</small>
+                            </div>
+                        </div>
+                        <div class="university-content">
+                            <h4>Peking University</h4>
+                            <p class="university-location"><i class="fas fa-map-marker-alt"></i> Beijing, China</p>
+                            <p class="university-desc" 
+                               data-fr="L'université la plus prestigieuse de Chine, reconnue pour son excellence académique globale et son campus magnifique." 
+                               data-en="China's most prestigious university, recognized for its global academic excellence and beautiful campus.">
+                                L'université la plus prestigieuse de Chine, reconnue pour son excellence académique globale et son campus magnifique.
+                            </p>
+                            <div class="university-specs">
+                                <span class="spec-tag" data-fr="Sciences Humaines" data-en="Humanities">Sciences Humaines</span>
+                                <span class="spec-tag" data-fr="Sciences Sociales" data-en="Social Sciences">Sciences Sociales</span>
+                                <span class="spec-tag" data-fr="Médecine" data-en="Medicine">Médecine</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="university-card">
+                        <div class="university-image">
+                            <img src="https://sspark.genspark.ai/cfimages?u1=YEfET5pOEF2E9xpiINA6src0jnL8PJ1bjDsVmqmxEBBvL%2B%2B5tcuf3eMXCoLzdtSa4fHshk7bUcvNoYx1xIkAktbV25jy5dbDVSRzJs5JIwL23RIg77qvuzuo7dXfyZaMW1nb8urCa3E%3D&u2=BRVsGO8IkGlatfUS&width=2560" alt="Fudan University">
+                            <div class="university-badge">
+                                <span>#36</span>
+                                <small data-fr="Mondial" data-en="World">Mondial</small>
+                            </div>
+                        </div>
+                        <div class="university-content">
+                            <h4>Fudan University</h4>
+                            <p class="university-location"><i class="fas fa-map-marker-alt"></i> Shanghai, China</p>
+                            <p class="university-desc" 
+                               data-fr="Université d'élite située à Shanghai, forte réputation internationale en business, économie et relations internationales." 
+                               data-en="Elite university located in Shanghai, strong international reputation in business, economics and international relations.">
+                                Université d'élite située à Shanghai, forte réputation internationale en business, économie et relations internationales.
+                            </p>
+                            <div class="university-specs">
+                                <span class="spec-tag">Business</span>
+                                <span class="spec-tag" data-fr="Économie" data-en="Economics">Économie</span>
+                                <span class="spec-tag" data-fr="Relations Internationales" data-en="International Relations">Relations Internationales</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="university-card">
+                        <div class="university-image">
+                            <img src="https://sspark.genspark.ai/cfimages?u1=PTHgrSYN1u7ddWJljNnLzm0XkARVIZ4Lcb40Qzc33DwZDWk6bq26d0aORGn90laCABC%2BsjpEVcKBL13qcK1Q7hyZLAbs8tlgLh9%2F58nYZ8BnKA7h7YQ5U4G8w0wtWA6E&u2=rrI3dgP2PSR0ibWa&width=2560" alt="Zhejiang University">
+                            <div class="university-badge">
+                                <span>#39</span>
+                                <small data-fr="Mondial" data-en="World">Mondial</small>
+                            </div>
+                        </div>
+                        <div class="university-content">
+                            <h4>Zhejiang University</h4>
+                            <p class="university-location"><i class="fas fa-map-marker-alt"></i> Hangzhou, China</p>
+                            <p class="university-desc" 
+                               data-fr="Campus magnifique à Hangzhou, leader en innovation technologique, informatique et intelligence artificielle." 
+                               data-en="Beautiful campus in Hangzhou, leader in technological innovation, computer science and artificial intelligence.">
+                                Campus magnifique à Hangzhou, leader en innovation technologique, informatique et intelligence artificielle.
+                            </p>
+                            <div class="university-specs">
+                                <span class="spec-tag" data-fr="Informatique" data-en="Computer Science">Informatique</span>
+                                <span class="spec-tag">IA</span>
+                                <span class="spec-tag" data-fr="Ingénierie" data-en="Engineering">Ingénierie</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="university-card">
+                        <div class="university-image">
+                            <img src="https://sspark.genspark.ai/cfimages?u1=%2BCwbV7iZmZO8Jx5o3InjdIOy%2FPJzL0Gz66dS%2FpOxk6DUoNfL3UUZp9MZXtU2FQMxxGIRLJ6XmulPCvWzHKpO&u2=WU%2B4ys0w%2BB8vfU3q&width=2560" alt="Shanghai Jiao Tong University">
+                            <div class="university-badge">
+                                <span>#69</span>
+                                <small data-fr="Mondial" data-en="World">Mondial</small>
+                            </div>
+                        </div>
+                        <div class="university-content">
+                            <h4>Shanghai Jiao Tong University</h4>
+                            <p class="university-location"><i class="fas fa-map-marker-alt"></i> Shanghai, China</p>
+                            <p class="university-desc" 
+                               data-fr="Excellence en recherche et innovation, partenariats internationaux solides. Forte en ingénierie mécanique et médecine." 
+                               data-en="Excellence in research and innovation, strong international partnerships. Strong in mechanical engineering and medicine.">
+                                Excellence en recherche et innovation, partenariats internationaux solides. Forte en ingénierie mécanique et médecine.
+                            </p>
+                            <div class="university-specs">
+                                <span class="spec-tag" data-fr="Ingénierie Mécanique" data-en="Mechanical Engineering">Ingénierie Mécanique</span>
+                                <span class="spec-tag" data-fr="Médecine" data-en="Medicine">Médecine</span>
+                                <span class="spec-tag">Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lower Tier Universities -->
+            <div class="university-category">
+                <h3 class="category-title" data-fr="💡 Universités Accessibles & Abordables" data-en="💡 Accessible & Affordable Universities">💡 Universités Accessibles & Abordables</h3>
+                <p class="category-subtitle" 
+                   data-fr="Excellentes options avec programmes solides, frais abordables et taux d'acceptation élevé" 
+                   data-en="Excellent options with solid programs, affordable fees and high acceptance rate">
+                    Excellentes options avec programmes solides, frais abordables et taux d'acceptation élevé
+                </p>
+                <div class="universities-grid">
+                    <div class="university-card affordable">
+                        <div class="university-content">
+                            <h4>Bohai University</h4>
+                            <p class="university-location"><i class="fas fa-map-marker-alt"></i> Liaoning, China</p>
+                            <p class="university-price"><i class="fas fa-tag"></i> <span data-fr="À partir de" data-en="Starting from">À partir de</span> 15,000 RMB/an</p>
+                            <p class="university-desc" 
+                               data-fr="Ville côtière agréable, taux d'acceptation élevé pour étudiants internationaux. Programmes variés en business, arts et sciences." 
+                               data-en="Pleasant coastal city, high acceptance rate for international students. Various programs in business, arts and sciences.">
+                                Ville côtière agréable, taux d'acceptation élevé pour étudiants internationaux. Programmes variés en business, arts et sciences.
+                            </p>
+                            <div class="university-specs">
+                                <span class="spec-tag">Business</span>
+                                <span class="spec-tag">Arts</span>
+                                <span class="spec-tag">Sciences</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="university-card affordable">
+                        <div class="university-content">
+                            <h4>Jiangsu University</h4>
+                            <p class="university-location"><i class="fas fa-map-marker-alt"></i> Jiangsu, China</p>
+                            <p class="university-price"><i class="fas fa-tag"></i> <span data-fr="À partir de" data-en="Starting from">À partir de</span> 18,000 RMB/an</p>
+                            <p class="university-desc" 
+                               data-fr="Forte communauté internationale, scholarships disponibles. Excellents programmes en médecine, ingénierie et agriculture." 
+                               data-en="Strong international community, scholarships available. Excellent programs in medicine, engineering and agriculture.">
+                                Forte communauté internationale, scholarships disponibles. Excellents programmes en médecine, ingénierie et agriculture.
+                            </p>
+                            <div class="university-specs">
+                                <span class="spec-tag" data-fr="Médecine" data-en="Medicine">Médecine</span>
+                                <span class="spec-tag" data-fr="Ingénierie" data-en="Engineering">Ingénierie</span>
+                                <span class="spec-tag">Agriculture</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="university-card affordable">
+                        <div class="university-content">
+                            <h4>Ningbo University</h4>
+                            <p class="university-location"><i class="fas fa-map-marker-alt"></i> Zhejiang, China</p>
+                            <p class="university-price"><i class="fas fa-tag"></i> <span data-fr="À partir de" data-en="Starting from">À partir de</span> 20,000 RMB/an</p>
+                            <p class="university-desc" 
+                               data-fr="Proche de Shanghai, environnement moderne. Spécialisée en commerce international et sciences marines." 
+                               data-en="Close to Shanghai, modern environment. Specialized in international trade and marine sciences.">
+                                Proche de Shanghai, environnement moderne. Spécialisée en commerce international et sciences marines.
+                            </p>
+                            <div class="university-specs">
+                                <span class="spec-tag" data-fr="Commerce International" data-en="International Trade">Commerce International</span>
+                                <span class="spec-tag" data-fr="Sciences Marines" data-en="Marine Sciences">Sciences Marines</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="university-card affordable">
+                        <div class="university-content">
+                            <h4>Chengdu University</h4>
+                            <p class="university-location"><i class="fas fa-map-marker-alt"></i> Sichuan, China</p>
+                            <p class="university-price"><i class="fas fa-tag"></i> <span data-fr="À partir de" data-en="Starting from">À partir de</span> 16,000 RMB/an</p>
+                            <p class="university-desc" 
+                               data-fr="Ville dynamique et culturelle, coût de vie abordable. Excellents programmes en art, design et gestion du tourisme." 
+                               data-en="Dynamic and cultural city, affordable cost of living. Excellent programs in art, design and tourism management.">
+                                Ville dynamique et culturelle, coût de vie abordable. Excellents programmes en art, design et gestion du tourisme.
+                            </p>
+                            <div class="university-specs">
+                                <span class="spec-tag">Art</span>
+                                <span class="spec-tag">Design</span>
+                                <span class="spec-tag" data-fr="Tourisme" data-en="Tourism">Tourisme</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="university-card affordable">
+                        <div class="university-content">
+                            <h4>Shenzhen University</h4>
+                            <p class="university-location"><i class="fas fa-map-marker-alt"></i> Guangdong, China</p>
+                            <p class="university-price"><i class="fas fa-tag"></i> <span data-fr="À partir de" data-en="Starting from">À partir de</span> 22,000 RMB/an</p>
+                            <p class="university-desc" 
+                               data-fr="Ville high-tech moderne, nombreuses opportunités de stage. Forte en IT, design et business avec liens industrie." 
+                               data-en="Modern high-tech city, many internship opportunities. Strong in IT, design and business with industry links.">
+                                Ville high-tech moderne, nombreuses opportunités de stage. Forte en IT, design et business avec liens industrie.
+                            </p>
+                            <div class="university-specs">
+                                <span class="spec-tag">IT</span>
+                                <span class="spec-tag">Design</span>
+                                <span class="spec-tag">Business</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-fr="Questions Fréquentes" data-en="Frequently Asked Questions">Questions Fréquentes</h2>
+                <p data-fr="Toutes les réponses à vos questions" data-en="All the answers to your questions">Toutes les réponses à vos questions</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-fr="Pourquoi choisir LCB-SCHOLAR ?" data-en="Why choose LCB-SCHOLAR?">Pourquoi choisir LCB-SCHOLAR ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-fr="Nous vous accompagnons depuis la soumission de votre candidature jusqu'à votre arrivée en Chine. Nos services sont personnalisés et nous proposons des opportunités dans plusieurs universités. Notre équipe est basée sur place à Guangzhou pour un support continu et professionnel." 
+                           data-en="We support you from the submission of your application to your arrival in China. Our services are personalized and we offer opportunities at several universities. Our team is based on-site in Guangzhou for continuous and professional support.">
+                            Nous vous accompagnons depuis la soumission de votre candidature jusqu'à votre arrivée en Chine. Nos services sont personnalisés et nous proposons des opportunités dans plusieurs universités. Notre équipe est basée sur place à Guangzhou pour un support continu et professionnel.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-fr="Faut-il parler chinois pour étudier en Chine ?" data-en="Do you need to speak Chinese to study in China?">Faut-il parler chinois pour étudier en Chine ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-fr="Non. De nombreux programmes sont disponibles en anglais. Le chinois est requis uniquement pour certains programmes spécifiques. Nous vous orientons vers les programmes adaptés à votre niveau linguistique." 
+                           data-en="No. Many programs are available in English. Chinese is only required for certain specific programs. We guide you to programs suited to your language level.">
+                            Non. De nombreux programmes sont disponibles en anglais. Le chinois est requis uniquement pour certains programmes spécifiques. Nous vous orientons vers les programmes adaptés à votre niveau linguistique.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-fr="Les diplômes chinois sont-ils reconnus ?" data-en="Are Chinese diplomas recognized?">Les diplômes chinois sont-ils reconnus ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-fr="Oui. Les diplômes délivrés par les universités chinoises sont reconnus internationalement, selon le domaine et l'université. Les universités que nous proposons sont toutes reconnues et accréditées." 
+                           data-en="Yes. Degrees awarded by Chinese universities are internationally recognized, depending on the field and university. The universities we offer are all recognized and accredited.">
+                            Oui. Les diplômes délivrés par les universités chinoises sont reconnus internationalement, selon le domaine et l'université. Les universités que nous proposons sont toutes reconnues et accréditées.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-fr="Combien de temps faut-il pour obtenir une réponse ?" data-en="How long does it take to get a response?">Combien de temps faut-il pour obtenir une réponse ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-fr="Le délai de réponse varie de 2 à 6 semaines, en fonction de l'université et du type de bourse. Nous assurons un suivi régulier de votre dossier et vous tenons informé à chaque étape." 
+                           data-en="The response time varies from 2 to 6 weeks, depending on the university and the type of scholarship. We ensure regular monitoring of your file and keep you informed at each step.">
+                            Le délai de réponse varie de 2 à 6 semaines, en fonction de l'université et du type de bourse. Nous assurons un suivi régulier de votre dossier et vous tenons informé à chaque étape.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-fr="Existe-t-il vraiment des bourses en Chine ?" data-en="Are there really scholarships in China?">Existe-t-il vraiment des bourses en Chine ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-fr="Oui. La Chine fait partie des pays qui offrent le plus de bourses d'études aux étudiants internationaux, sous forme de bourses complètes ou partielles. Le gouvernement chinois investit massivement dans l'attraction de talents internationaux." 
+                           data-en="Yes. China is among the countries that offer the most scholarships to international students, in the form of full or partial scholarships. The Chinese government invests heavily in attracting international talent.">
+                            Oui. La Chine fait partie des pays qui offrent le plus de bourses d'études aux étudiants internationaux, sous forme de bourses complètes ou partielles. Le gouvernement chinois investit massivement dans l'attraction de talents internationaux.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item warning">
+                    <div class="faq-question">
+                        <h4 data-fr="⚠️ Attention aux arnaques" data-en="⚠️ Warning against scams">⚠️ Attention aux arnaques</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-fr="Méfiez-vous des promesses de bourses garanties à 100%. Un accompagnement sérieux explique sa procédure de manière transparente. LCB-SCHOLAR vous accompagne de manière professionnelle à chaque étape, avec une présence réelle sur place en Chine." 
+                           data-en="Beware of promises of 100% guaranteed scholarships. A serious support service explains its process transparently. LCB-SCHOLAR guides you professionally at every step, with a real presence on-site in China.">
+                            Méfiez-vous des promesses de bourses garanties à 100%. Un accompagnement sérieux explique sa procédure de manière transparente. LCB-SCHOLAR vous accompagne de manière professionnelle à chaque étape, avec une présence réelle sur place en Chine.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parents Section -->
+    <section class="parents">
+        <div class="container">
+            <div class="parents-content">
+                <div class="parents-header">
+                    <i class="fas fa-heart"></i>
+                    <h2 data-fr="Message aux Parents" data-en="Message to Parents">Message aux Parents</h2>
+                </div>
+                <p data-fr="Chers parents, nous comprenons vos préoccupations concernant l'éducation de vos enfants à l'étranger. LCB-SCHOLAR s'engage à vous fournir un accompagnement transparent et fiable." 
+                   data-en="Dear parents, we understand your concerns regarding your children's education abroad. LCB-SCHOLAR is committed to providing you with transparent and reliable support.">
+                    Chers parents, nous comprenons vos préoccupations concernant l'éducation de vos enfants à l'étranger. LCB-SCHOLAR s'engage à vous fournir un accompagnement transparent et fiable.
+                </p>
+                <div class="parents-grid">
+                    <div class="parents-point">
+                        <i class="fas fa-check-circle"></i>
+                        <p data-fr="Nous sommes présents en Chine pour garantir une assistance continue et un suivi de qualité." 
+                           data-en="We are present in China to ensure continuous assistance and quality follow-up.">
+                            Nous sommes présents en Chine pour garantir une assistance continue et un suivi de qualité.
+                        </p>
+                    </div>
+                    <div class="parents-point">
+                        <i class="fas fa-check-circle"></i>
+                        <p data-fr="Votre enfant sera bien pris en charge pendant ses études en Chine, avec un support 24/7 en cas de besoin." 
+                           data-en="Your child will be well cared for during their studies in China, with 24/7 support if needed.">
+                            Votre enfant sera bien pris en charge pendant ses études en Chine, avec un support 24/7 en cas de besoin.
+                        </p>
+                    </div>
+                    <div class="parents-point">
+                        <i class="fas fa-check-circle"></i>
+                        <p data-fr="Les frais d'application sont investis dans une analyse complète du dossier et un accompagnement personnalisé pour maximiser les chances de succès." 
+                           data-en="The application fees are invested in a comprehensive review of the file and personalized support to maximize the chances of success.">
+                            Les frais d'application sont investis dans une analyse complète du dossier et un accompagnement personnalisé pour maximiser les chances de succès.
+                        </p>
+                    </div>
+                    <div class="parents-point">
+                        <i class="fas fa-check-circle"></i>
+                        <p data-fr="Nous avons des partenaires fiables et des accords avec des universités chinoises prestigieuses." 
+                           data-en="We have reliable partners and agreements with prestigious Chinese universities.">
+                            Nous avons des partenaires fiables et des accords avec des universités chinoises prestigieuses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-fr="Contactez-Nous" data-en="Contact Us">Contactez-Nous</h2>
+                <p data-fr="Prêt à commencer votre aventure chinoise ? Contactez-nous dès maintenant !" data-en="Ready to start your Chinese adventure? Contact us now!">Prêt à commencer votre aventure chinoise ? Contactez-nous dès maintenant !</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:lcbscholar@gmail.com">lcbscholar@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-telegram"></i>
+                        <div>
+                            <h4>Telegram</h4>
+                            <a href="https://t.me/+8619708192857">+86 19708192857</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/8618652659785">+86 18652659785</a><br>
+                            <a href="https://wa.me/8617539192966">+86 17539192966</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-fr="Bureau" data-en="Office">Bureau</h4>
+                            <p>Guangzhou, China</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name" data-fr="Nom Complet" data-en="Full Name">Nom Complet</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" required placeholder=" ">
+                            <label for="phone" data-fr="Téléphone" data-en="Phone">Téléphone</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="program" name="program" required>
+                                <option value="" data-fr="Sélectionnez un programme" data-en="Select a program">Sélectionnez un programme</option>
+                                <option value="licence" data-fr="Licence" data-en="Bachelor">Licence</option>
+                                <option value="master">Master</option>
+                                <option value="doctorat" data-fr="Doctorat" data-en="PhD">Doctorat</option>
+                                <option value="langue" data-fr="Année de langue" data-en="Language Year">Année de langue</option>
+                            </select>
+                            <label for="program" data-fr="Programme Désiré" data-en="Desired Program">Programme Désiré</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-fr="Envoyer le Message" data-en="Send Message">Envoyer le Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="https://www.genspark.ai/api/files/s/nfwJxH7L" alt="LCB-SCHOLAR Logo" class="footer-logo">
+                    <p data-fr="Votre partenaire de confiance pour les bourses d'études en Chine" data-en="Your trusted partner for scholarships in China">Votre partenaire de confiance pour les bourses d'études en Chine</p>
+                    <div class="social-links">
+                        <a href="https://t.me/+8619708192857" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://wa.me/8618652659785" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:lcbscholar@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 data-fr="Liens Rapides" data-en="Quick Links">Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#home" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                        <li><a href="#about" data-fr="À Propos" data-en="About">À Propos</a></li>
+                        <li><a href="#process" data-fr="Processus" data-en="Process">Processus</a></li>
+                        <li><a href="#universities" data-fr="Universités" data-en="Universities">Universités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-fr="Programmes" data-en="Programs">Programmes</h4>
+                    <ul>
+                        <li><a href="#" data-fr="Licence" data-en="Bachelor">Licence</a></li>
+                        <li><a href="#" data-fr="Master" data-en="Master">Master</a></li>
+                        <li><a href="#" data-fr="Doctorat" data-en="PhD">Doctorat</a></li>
+                        <li><a href="#" data-fr="Année de langue" data-en="Language Year">Année de langue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> lcbscholar@gmail.com</li>
+                        <li><i class="fab fa-telegram"></i> +86 19708192857</li>
+                        <li><i class="fab fa-whatsapp"></i> +86 18652659785</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Guangzhou, China</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LCB-SCHOLAR. <span data-fr="Tous droits réservés." data-en="All rights reserved.">Tous droits réservés.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
