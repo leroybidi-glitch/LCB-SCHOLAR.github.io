@@ -1,0 +1,14 @@
+/* Styles spécifiques page candidature */
+
+.apply-page {
+    background: #f9fafc;
+}
+
+.apply-page .section-header h2 {
+    color: #1e3a8a;
+}
+
+.apply-page .btn {
+    font-size: 18px;
+    padding: 14px 30px;
+}
