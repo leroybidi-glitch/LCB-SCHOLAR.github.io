@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LCB-SCHOLAR - Formulaire de dépôt de candidature pour bourses d'études en Chine">
+    <title>Dépôt de Candidature | LCB-SCHOLAR</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/application.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Toggle Button -->
+    <div class="language-toggle">
+        <button id="langToggle" class="lang-btn">
+            <i class="fas fa-globe"></i>
+            <span id="currentLang">FR</span> / <span id="alternateLang">EN</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://www.genspark.ai/api/files/s/nfwJxH7L" alt="LCB-SCHOLAR Logo">
+                    </a>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                        <li><a href="index.html#about" data-fr="À Propos" data-en="About">À Propos</a></li>
+                        <li><a href="index.html#process" data-fr="Processus" data-en="Process">Processus</a></li>
+                        <li><a href="index.html#universities" data-fr="Universités" data-en="Universities">Universités</a></li>
+                        <li><a href="application.html" class="active" data-fr="Candidature" data-en="Application">Candidature</a></li>
+                        <li><a href="index.html#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Application Hero -->
+    <section class="application-hero">
+        <div class="container">
+            <div class="hero-content-app">
+                <i class="fas fa-graduation-cap hero-icon"></i>
+                <h1 data-fr="Formulaire de Dépôt de Candidature" data-en="Application Submission Form">Formulaire de Dépôt de Candidature</h1>
+                <p data-fr="Complétez votre candidature pour les bourses d'études en Chine" 
+                   data-en="Complete your application for scholarships in China">
+                    Complétez votre candidature pour les bourses d'études en Chine
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Verification Notice -->
+    <section class="payment-notice">
+        <div class="container">
+            <div class="notice-card">
+                <div class="notice-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="notice-content">
+                    <h3 data-fr="⚠️ Important : Vérification du Paiement" data-en="⚠️ Important: Payment Verification">⚠️ Important : Vérification du Paiement</h3>
+                    <p data-fr="Ce formulaire est accessible uniquement après paiement des frais de dépôt de candidature (7200¥). Assurez-vous d'avoir effectué le paiement avant de soumettre votre candidature." 
+                       data-en="This form is accessible only after payment of the application deposit fee (¥7200). Make sure you have made the payment before submitting your application.">
+                        Ce formulaire est accessible uniquement après paiement des frais de dépôt de candidature (7200¥). Assurez-vous d'avoir effectué le paiement avant de soumettre votre candidature.
+                    </p>
+                    <div class="payment-methods">
+                        <span data-fr="💳 Moyens de paiement acceptés" data-en="💳 Accepted payment methods">💳 Moyens de paiement acceptés</span>
+                        <div class="methods">
+                            <span class="method">WeChat Pay</span>
+                            <span class="method">Alipay</span>
+                            <span class="method">Bank Transfer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Indicator -->
+    <section class="progress-section">
+        <div class="container">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="progress-steps">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-circle">1</div>
+                    <span data-fr="Informations Personnelles" data-en="Personal Information">Informations Personnelles</span>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-circle">2</div>
+                    <span data-fr="Parcours Académique" data-en="Academic Background">Parcours Académique</span>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-circle">3</div>
+                    <span data-fr="Documents & Paiement" data-en="Documents & Payment">Documents & Paiement</span>
+                </div>
+                <div class="progress-step" data-step="4">
+                    <div class="step-circle">4</div>
+                    <span data-fr="Confirmation" data-en="Confirmation">Confirmation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="application-form-section">
+        <div class="container">
+            <form id="applicationForm" class="application-form" enctype="multipart/form-data">
+                
+                <!-- Step 1: Personal Information -->
+                <div class="form-step active" data-step="1">
+                    <div class="step-header">
+                        <h2 data-fr="📋 Étape 1 : Informations Personnelles" data-en="📋 Step 1: Personal Information">📋 Étape 1 : Informations Personnelles</h2>
+                        <p data-fr="Veuillez fournir vos informations personnelles exactes" data-en="Please provide your exact personal information">Veuillez fournir vos informations personnelles exactes</p>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName" data-fr="Prénom *" data-en="First Name *">Prénom *</label>
+                            <input type="text" id="firstName" name="firstName" required placeholder=" ">
+                            <small class="helper-text" data-fr="Tel qu'indiqué sur votre passeport" data-en="As shown on your passport">Tel qu'indiqué sur votre passeport</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName" data-fr="Nom de famille *" data-en="Last Name *">Nom de famille *</label>
+                            <input type="text" id="lastName" name="lastName" required placeholder=" ">
+                            <small class="helper-text" data-fr="Tel qu'indiqué sur votre passeport" data-en="As shown on your passport">Tel qu'indiqué sur votre passeport</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dateOfBirth" data-fr="Date de naissance *" data-en="Date of Birth *">Date de naissance *</label>
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender" data-fr="Genre *" data-en="Gender *">Genre *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="" data-fr="Sélectionner" data-en="Select">Sélectionner</option>
+                                <option value="male" data-fr="Masculin" data-en="Male">Masculin</option>
+                                <option value="female" data-fr="Féminin" data-en="Female">Féminin</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nationality" data-fr="Nationalité *" data-en="Nationality *">Nationalité *</label>
+                            <input type="text" id="nationality" name="nationality" required placeholder=" ">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="passportNumber" data-fr="Numéro de passeport *" data-en="Passport Number *">Numéro de passeport *</label>
+                            <input type="text" id="passportNumber" name="passportNumber" required placeholder=" ">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="email" data-fr="Adresse e-mail *" data-en="Email Address *">Adresse e-mail *</label>
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <small class="helper-text" data-fr="Nous vous enverrons les mises à jour à cette adresse" data-en="We will send updates to this address">Nous vous enverrons les mises à jour à cette adresse</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" data-fr="Téléphone *" data-en="Phone *">Téléphone *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+XXX XXXXXXXXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="whatsapp" data-fr="WhatsApp" data-en="WhatsApp">WhatsApp</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+XXX XXXXXXXXX">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="address" data-fr="Adresse complète *" data-en="Full Address *">Adresse complète *</label>
+                            <textarea id="address" name="address" rows="3" required placeholder=" "></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country" data-fr="Pays de résidence *" data-en="Country of Residence *">Pays de résidence *</label>
+                            <input type="text" id="country" name="country" required placeholder=" ">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city" data-fr="Ville *" data-en="City *">Ville *</label>
+                            <input type="text" id="city" name="city" required placeholder=" ">
+                        </div>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-next" onclick="nextStep()" data-fr="Suivant ➜" data-en="Next ➜">Suivant ➜</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Academic Background -->
+                <div class="form-step" data-step="2">
+                    <div class="step-header">
+                        <h2 data-fr="🎓 Étape 2 : Parcours Académique" data-en="🎓 Step 2: Academic Background">🎓 Étape 2 : Parcours Académique</h2>
+                        <p data-fr="Informations sur votre formation et parcours académique" data-en="Information about your education and academic background">Informations sur votre formation et parcours académique</p>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="programLevel" data-fr="Programme désiré *" data-en="Desired Program *">Programme désiré *</label>
+                            <select id="programLevel" name="programLevel" required>
+                                <option value="" data-fr="Sélectionner un programme" data-en="Select a program">Sélectionner un programme</option>
+                                <option value="bachelor" data-fr="Licence (Bachelor)" data-en="Bachelor's Degree">Licence (Bachelor)</option>
+                                <option value="master" data-fr="Master" data-en="Master's Degree">Master</option>
+                                <option value="phd" data-fr="Doctorat (PhD)" data-en="PhD">Doctorat (PhD)</option>
+                                <option value="language" data-fr="Année de langue" data-en="Language Year">Année de langue</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="fieldOfStudy" data-fr="Domaine d'études souhaité *" data-en="Desired Field of Study *">Domaine d'études souhaité *</label>
+                            <select id="fieldOfStudy" name="fieldOfStudy" required>
+                                <option value="" data-fr="Sélectionner un domaine" data-en="Select a field">Sélectionner un domaine</option>
+                                <option value="engineering" data-fr="Ingénierie" data-en="Engineering">Ingénierie</option>
+                                <option value="business" data-fr="Business & Management" data-en="Business & Management">Business & Management</option>
+                                <option value="medicine" data-fr="Médecine" data-en="Medicine">Médecine</option>
+                                <option value="computer-science" data-fr="Informatique" data-en="Computer Science">Informatique</option>
+                                <option value="arts" data-fr="Arts & Design" data-en="Arts & Design">Arts & Design</option>
+                                <option value="economics" data-fr="Économie" data-en="Economics">Économie</option>
+                                <option value="agriculture" data-fr="Agriculture" data-en="Agriculture">Agriculture</option>
+                                <option value="humanities" data-fr="Sciences Humaines" data-en="Humanities">Sciences Humaines</option>
+                                <option value="sciences" data-fr="Sciences" data-en="Sciences">Sciences</option>
+                                <option value="other" data-fr="Autre" data-en="Other">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="languageOfInstruction" data-fr="Langue d'enseignement préférée *" data-en="Preferred Language of Instruction *">Langue d'enseignement préférée *</label>
+                            <select id="languageOfInstruction" name="languageOfInstruction" required>
+                                <option value="" data-fr="Sélectionner" data-en="Select">Sélectionner</option>
+                                <option value="english" data-fr="Anglais" data-en="English">Anglais</option>
+                                <option value="chinese" data-fr="Chinois" data-en="Chinese">Chinois</option>
+                                <option value="both" data-fr="Les deux" data-en="Both">Les deux</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="highestDegree" data-fr="Dernier diplôme obtenu *" data-en="Highest Degree Obtained *">Dernier diplôme obtenu *</label>
+                            <select id="highestDegree" name="highestDegree" required>
+                                <option value="" data-fr="Sélectionner" data-en="Select">Sélectionner</option>
+                                <option value="high-school" data-fr="Baccalauréat" data-en="High School">Baccalauréat</option>
+                                <option value="bachelor" data-fr="Licence" data-en="Bachelor's">Licence</option>
+                                <option value="master" data-fr="Master" data-en="Master's">Master</option>
+                                <option value="other" data-fr="Autre" data-en="Other">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="graduationYear" data-fr="Année d'obtention *" data-en="Year of Graduation *">Année d'obtention *</label>
+                            <input type="number" id="graduationYear" name="graduationYear" min="2000" max="2026" required placeholder="2024">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="lastSchool" data-fr="Dernier établissement fréquenté *" data-en="Last School Attended *">Dernier établissement fréquenté *</label>
+                            <input type="text" id="lastSchool" name="lastSchool" required placeholder=" ">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gpa" data-fr="Moyenne générale (GPA)" data-en="GPA">Moyenne générale (GPA)</label>
+                            <input type="text" id="gpa" name="gpa" placeholder="Ex: 3.5/4.0 ou 15/20">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="languageProficiency" data-fr="Niveau de langue" data-en="Language Proficiency">Niveau de langue</label>
+                            <select id="languageProficiency" name="languageProficiency">
+                                <option value="" data-fr="Sélectionner" data-en="Select">Sélectionner</option>
+                                <option value="none" data-fr="Aucun" data-en="None">Aucun</option>
+                                <option value="hsk1-2" data-fr="HSK 1-2 (Chinois)" data-en="HSK 1-2 (Chinese)">HSK 1-2 (Chinois)</option>
+                                <option value="hsk3-4" data-fr="HSK 3-4 (Chinois)" data-en="HSK 3-4 (Chinese)">HSK 3-4 (Chinois)</option>
+                                <option value="hsk5-6" data-fr="HSK 5-6 (Chinois)" data-en="HSK 5-6 (Chinese)">HSK 5-6 (Chinois)</option>
+                                <option value="ielts" data-fr="IELTS (Anglais)" data-en="IELTS (English)">IELTS (Anglais)</option>
+                                <option value="toefl" data-fr="TOEFL (Anglais)" data-en="TOEFL (English)">TOEFL (Anglais)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="motivation" data-fr="Lettre de motivation (Résumé) *" data-en="Motivation Letter (Summary) *">Lettre de motivation (Résumé) *</label>
+                            <textarea id="motivation" name="motivation" rows="5" required placeholder=" " data-fr-placeholder="Expliquez pourquoi vous souhaitez étudier en Chine et vos objectifs..." data-en-placeholder="Explain why you want to study in China and your goals..."></textarea>
+                            <small class="helper-text" data-fr="Minimum 200 caractères" data-en="Minimum 200 characters">Minimum 200 caractères</small>
+                        </div>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()" data-fr="⬅ Précédent" data-en="⬅ Previous">⬅ Précédent</button>
+                        <button type="button" class="btn btn-next" onclick="nextStep()" data-fr="Suivant ➜" data-en="Next ➜">Suivant ➜</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Documents & Payment -->
+                <div class="form-step" data-step="3">
+                    <div class="step-header">
+                        <h2 data-fr="📁 Étape 3 : Documents & Paiement" data-en="📁 Step 3: Documents & Payment">📁 Étape 3 : Documents & Paiement</h2>
+                        <p data-fr="Téléchargez vos documents requis et confirmez votre paiement" data-en="Upload your required documents and confirm your payment">Téléchargez vos documents requis et confirmez votre paiement</p>
+                    </div>
+
+                    <!-- Payment Confirmation -->
+                    <div class="payment-confirmation-box">
+                        <h3 data-fr="💳 Confirmation du Paiement des Frais de Dépôt" data-en="💳 Deposit Fee Payment Confirmation">💳 Confirmation du Paiement des Frais de Dépôt</h3>
+                        <div class="payment-info">
+                            <div class="payment-amount">
+                                <span data-fr="Montant payé :" data-en="Amount paid:">Montant payé :</span>
+                                <strong>7,200¥</strong>
+                            </div>
+                            <p class="payment-description" data-fr="Les frais de dépôt de 7200¥ couvrent l'analyse de votre profil, la préparation de votre dossier et la soumission à plusieurs universités partenaires." data-en="The deposit fee of ¥7200 covers the analysis of your profile, preparation of your file, and submission to several partner universities.">
+                                Les frais de dépôt de 7200¥ couvrent l'analyse de votre profil, la préparation de votre dossier et la soumission à plusieurs universités partenaires.
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paymentMethod" data-fr="Méthode de paiement utilisée *" data-en="Payment Method Used *">Méthode de paiement utilisée *</label>
+                            <select id="paymentMethod" name="paymentMethod" required>
+                                <option value="" data-fr="Sélectionner" data-en="Select">Sélectionner</option>
+                                <option value="wechat" data-fr="WeChat Pay" data-en="WeChat Pay">WeChat Pay</option>
+                                <option value="alipay" data-fr="Alipay" data-en="Alipay">Alipay</option>
+                                <option value="bank" data-fr="Virement bancaire" data-en="Bank Transfer">Virement bancaire</option>
+                                <option value="other" data-fr="Autre" data-en="Other">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="transactionId" data-fr="Numéro de transaction / Référence *" data-en="Transaction ID / Reference *">Numéro de transaction / Référence *</label>
+                            <input type="text" id="transactionId" name="transactionId" required placeholder=" ">
+                            <small class="helper-text" data-fr="Numéro fourni lors du paiement" data-en="Number provided during payment">Numéro fourni lors du paiement</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paymentDate" data-fr="Date du paiement *" data-en="Payment Date *">Date du paiement *</label>
+                            <input type="date" id="paymentDate" name="paymentDate" required>
+                        </div>
+
+                        <div class="form-group file-upload">
+                            <label for="paymentProof" data-fr="Preuve de paiement *" data-en="Payment Proof *">Preuve de paiement *</label>
+                            <div class="file-input-wrapper">
+                                <input type="file" id="paymentProof" name="paymentProof" accept=".jpg,.jpeg,.png,.pdf" required>
+                                <label for="paymentProof" class="file-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span data-fr="Cliquez pour télécharger ou glissez-déposez" data-en="Click to upload or drag and drop">Cliquez pour télécharger ou glissez-déposez</span>
+                                    <small data-fr="JPG, PNG ou PDF (Max 5MB)" data-en="JPG, PNG or PDF (Max 5MB)">JPG, PNG ou PDF (Max 5MB)</small>
+                                </label>
+                                <span class="file-name"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document Uploads -->
+                    <div class="documents-upload-section">
+                        <h3 data-fr="📄 Documents Requis" data-en="📄 Required Documents">📄 Documents Requis</h3>
+                        
+                        <div class="upload-grid">
+                            <div class="form-group file-upload">
+                                <label for="passport" data-fr="Copie du passeport *" data-en="Passport Copy *">Copie du passeport *</label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="passport" name="passport" accept=".jpg,.jpeg,.png,.pdf" required>
+                                    <label for="passport" class="file-label">
+                                        <i class="fas fa-passport"></i>
+                                        <span data-fr="Télécharger" data-en="Upload">Télécharger</span>
+                                    </label>
+                                    <span class="file-name"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group file-upload">
+                                <label for="photo" data-fr="Photo d'identité *" data-en="ID Photo *">Photo d'identité *</label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png" required>
+                                    <label for="photo" class="file-label">
+                                        <i class="fas fa-camera"></i>
+                                        <span data-fr="Télécharger" data-en="Upload">Télécharger</span>
+                                    </label>
+                                    <span class="file-name"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group file-upload">
+                                <label for="diploma" data-fr="Dernier diplôme *" data-en="Last Diploma *">Dernier diplôme *</label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="diploma" name="diploma" accept=".jpg,.jpeg,.png,.pdf" required>
+                                    <label for="diploma" class="file-label">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <span data-fr="Télécharger" data-en="Upload">Télécharger</span>
+                                    </label>
+                                    <span class="file-name"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group file-upload">
+                                <label for="transcripts" data-fr="Relevés de notes *" data-en="Transcripts *">Relevés de notes *</label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="transcripts" name="transcripts" accept=".jpg,.jpeg,.png,.pdf" required>
+                                    <label for="transcripts" class="file-label">
+                                        <i class="fas fa-file-alt"></i>
+                                        <span data-fr="Télécharger" data-en="Upload">Télécharger</span>
+                                    </label>
+                                    <span class="file-name"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group file-upload">
+                                <label for="medicalCert" data-fr="Certificat médical *" data-en="Medical Certificate *">Certificat médical *</label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="medicalCert" name="medicalCert" accept=".jpg,.jpeg,.png,.pdf" required>
+                                    <label for="medicalCert" class="file-label">
+                                        <i class="fas fa-heartbeat"></i>
+                                        <span data-fr="Télécharger" data-en="Upload">Télécharger</span>
+                                    </label>
+                                    <span class="file-name"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group file-upload">
+                                <label for="criminalRecord" data-fr="Casier judiciaire *" data-en="Criminal Record *">Casier judiciaire *</label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="criminalRecord" name="criminalRecord" accept=".jpg,.jpeg,.png,.pdf" required>
+                                    <label for="criminalRecord" class="file-label">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span data-fr="Télécharger" data-en="Upload">Télécharger</span>
+                                    </label>
+                                    <span class="file-name"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group file-upload">
+                                <label for="recommendationLetter" data-fr="Lettre de recommandation *" data-en="Recommendation Letter *">Lettre de recommandation *</label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="recommendationLetter" name="recommendationLetter" accept=".jpg,.jpeg,.png,.pdf" required>
+                                    <label for="recommendationLetter" class="file-label">
+                                        <i class="fas fa-envelope"></i>
+                                        <span data-fr="Télécharger" data-en="Upload">Télécharger</span>
+                                    </label>
+                                    <span class="file-name"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group file-upload">
+                                <label for="motivationLetter" data-fr="Lettre de motivation complète *" data-en="Full Motivation Letter *">Lettre de motivation complète *</label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="motivationLetter" name="motivationLetter" accept=".jpg,.jpeg,.png,.pdf" required>
+                                    <label for="motivationLetter" class="file-label">
+                                        <i class="fas fa-pen"></i>
+                                        <span data-fr="Télécharger" data-en="Upload">Télécharger</span>
+                                    </label>
+                                    <span class="file-name"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Optional Documents -->
+                        <h4 data-fr="📎 Documents Optionnels (Recommandés)" data-en="📎 Optional Documents (Recommended)">📎 Documents Optionnels (Recommandés)</h4>
+                        <div class="upload-grid optional-docs">
+                            <div class="form-group file-upload">
+                                <label for="languageCert" data-fr="Certificat de langue (HSK/IELTS/TOEFL)" data-en="Language Certificate (HSK/IELTS/TOEFL)">Certificat de langue</label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="languageCert" name="languageCert" accept=".jpg,.jpeg,.png,.pdf">
+                                    <label for="languageCert" class="file-label">
+                                        <i class="fas fa-language"></i>
+                                        <span data-fr="Télécharger" data-en="Upload">Télécharger</span>
+                                    </label>
+                                    <span class="file-name"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group file-upload">
+                                <label for="portfolio" data-fr="Portfolio (pour filières artistiques)" data-en="Portfolio (for art programs)">Portfolio</label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="portfolio" name="portfolio" accept=".jpg,.jpeg,.png,.pdf">
+                                    <label for="portfolio" class="file-label">
+                                        <i class="fas fa-images"></i>
+                                        <span data-fr="Télécharger" data-en="Upload">Télécharger</span>
+                                    </label>
+                                    <span class="file-name"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group file-upload">
+                                <label for="workCert" data-fr="Certificat de travail/stage" data-en="Work/Internship Certificate">Certificat de travail/stage</label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="workCert" name="workCert" accept=".jpg,.jpeg,.png,.pdf">
+                                    <label for="workCert" class="file-label">
+                                        <i class="fas fa-briefcase"></i>
+                                        <span data-fr="Télécharger" data-en="Upload">Télécharger</span>
+                                    </label>
+                                    <span class="file-name"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()" data-fr="⬅ Précédent" data-en="⬅ Previous">⬅ Précédent</button>
+                        <button type="button" class="btn btn-next" onclick="nextStep()" data-fr="Suivant ➜" data-en="Next ➜">Suivant ➜</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Confirmation -->
+                <div class="form-step" data-step="4">
+                    <div class="step-header">
+                        <h2 data-fr="✅ Étape 4 : Vérification et Soumission" data-en="✅ Step 4: Review and Submit">✅ Étape 4 : Vérification et Soumission</h2>
+                        <p data-fr="Vérifiez vos informations avant de soumettre votre candidature" data-en="Review your information before submitting your application">Vérifiez vos informations avant de soumettre votre candidature</p>
+                    </div>
+
+                    <div class="summary-section" id="summarySection">
+                        <!-- Summary will be generated dynamically -->
+                    </div>
+
+                    <div class="terms-section">
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">
+                                <span data-fr="J'accepte les " data-en="I accept the ">J'accepte les </span>
+                                <a href="#" data-fr="termes et conditions" data-en="terms and conditions">termes et conditions</a>
+                                <span data-fr=" de LCB-SCHOLAR" data-en=" of LCB-SCHOLAR"> de LCB-SCHOLAR</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="accuracy" name="accuracy" required>
+                            <label for="accuracy" data-fr="Je certifie que toutes les informations fournies sont exactes et véridiques" data-en="I certify that all information provided is accurate and truthful">
+                                Je certifie que toutes les informations fournies sont exactes et véridiques
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent" data-fr="J'autorise LCB-SCHOLAR à traiter mes données personnelles conformément à la politique de confidentialité" data-en="I authorize LCB-SCHOLAR to process my personal data in accordance with the privacy policy">
+                                J'autorise LCB-SCHOLAR à traiter mes données personnelles conformément à la politique de confidentialité
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="final-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p data-fr="Après soumission, notre équipe examinera votre candidature dans les 48 heures. Vous recevrez un email de confirmation avec votre numéro de dossier." data-en="After submission, our team will review your application within 48 hours. You will receive a confirmation email with your application number.">
+                            Après soumission, notre équipe examinera votre candidature dans les 48 heures. Vous recevrez un email de confirmation avec votre numéro de dossier.
+                        </p>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()" data-fr="⬅ Précédent" data-en="⬅ Previous">⬅ Précédent</button>
+                        <button type="submit" class="btn btn-primary btn-submit" data-fr="🚀 Soumettre ma Candidature" data-en="🚀 Submit My Application">🚀 Soumettre ma Candidature</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon success">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 data-fr="Candidature Soumise avec Succès !" data-en="Application Submitted Successfully!">Candidature Soumise avec Succès !</h2>
+            <p data-fr="Merci pour votre candidature ! Votre dossier a été enregistré." data-en="Thank you for your application! Your file has been saved.">Merci pour votre candidature ! Votre dossier a été enregistré.</p>
+            <div class="application-number">
+                <span data-fr="Numéro de dossier :" data-en="Application Number:">Numéro de dossier :</span>
+                <strong id="applicationNumber">LCB-2026-XXXX</strong>
+            </div>
+            <p class="modal-text" data-fr="Vous recevrez un email de confirmation sous peu. Notre équipe examinera votre candidature dans les 48 heures." data-en="You will receive a confirmation email shortly. Our team will review your application within 48 hours.">
+                Vous recevrez un email de confirmation sous peu. Notre équipe examinera votre candidature dans les 48 heures.
+            </p>
+            <button class="btn btn-primary" onclick="closeModal()" data-fr="Fermer" data-en="Close">Fermer</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="https://www.genspark.ai/api/files/s/nfwJxH7L" alt="LCB-SCHOLAR Logo" class="footer-logo">
+                    <p data-fr="Votre partenaire de confiance pour les bourses d'études en Chine" data-en="Your trusted partner for scholarships in China">Votre partenaire de confiance pour les bourses d'études en Chine</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> lcbscholar@gmail.com</li>
+                        <li><i class="fab fa-telegram"></i> +86 19708192857</li>
+                        <li><i class="fab fa-whatsapp"></i> +86 18652659785</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Guangzhou, China</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LCB-SCHOLAR. <span data-fr="Tous droits réservés." data-en="All rights reserved.">Tous droits réservés.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/application.js"></script>
+</body>
+</html>
