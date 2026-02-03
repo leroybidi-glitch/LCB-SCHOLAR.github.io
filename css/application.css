@@ -1,0 +1,863 @@
+/* ===========================
+   LCB-SCHOLAR Application Page Styles
+   Professional Application Form
+   =========================== */
+
+/* ===========================
+   Application Hero
+   =========================== */
+
+.application-hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 50%, var(--primary-red) 100%);
+    padding: 80px 0 60px;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.application-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)" /></svg>');
+    opacity: 0.3;
+}
+
+.hero-content-app {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.hero-content-app h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.hero-content-app p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* ===========================
+   Payment Notice
+   =========================== */
+
+.payment-notice {
+    padding: 40px 0;
+    background: var(--light-gray);
+}
+
+.notice-card {
+    background: #FFF9E6;
+    border-left: 5px solid var(--gold);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.notice-icon {
+    flex-shrink: 0;
+}
+
+.notice-icon i {
+    font-size: 3rem;
+    color: var(--gold);
+}
+
+.notice-content h3 {
+    color: var(--black);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.notice-content p {
+    color: var(--dark-gray);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-methods span {
+    font-weight: 600;
+    color: var(--black);
+}
+
+.methods {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.method {
+    background: var(--white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--primary-green);
+    font-weight: 500;
+    border: 2px solid var(--primary-green);
+}
+
+/* ===========================
+   Progress Indicator
+   =========================== */
+
+.progress-section {
+    padding: 40px 0;
+    background: var(--white);
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background: var(--light-gray);
+    border-radius: 10px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-green), var(--primary-red));
+    width: 25%;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    text-align: center;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.progress-step.active {
+    opacity: 1;
+}
+
+.step-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--light-gray);
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.progress-step.active .step-circle {
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-red));
+    color: var(--white);
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
+}
+
+.progress-step.completed .step-circle {
+    background: var(--primary-green);
+    color: var(--white);
+}
+
+.progress-step.completed .step-circle::after {
+    content: '✓';
+    font-size: 1.5rem;
+}
+
+.progress-step span {
+    font-size: 0.9rem;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+.progress-step.active span {
+    color: var(--black);
+    font-weight: 600;
+}
+
+/* ===========================
+   Application Form Section
+   =========================== */
+
+.application-form-section {
+    padding: 60px 0 100px;
+    background: var(--light-gray);
+}
+
+.application-form {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px var(--shadow-hover);
+    overflow: hidden;
+}
+
+.form-step {
+    display: none;
+    padding: 50px;
+    animation: fadeInUp 0.5s ease;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.step-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.step-header h2 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.step-header p {
+    color: var(--gray);
+    font-size: 1.1rem;
+}
+
+/* ===========================
+   Form Grid & Groups
+   =========================== */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--black);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--light-gray);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: var(--white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.1);
+}
+
+.form-group input:invalid:not(:placeholder-shown),
+.form-group select:invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--primary-red);
+}
+
+.form-group input:valid:not(:placeholder-shown),
+.form-group select:valid,
+.form-group textarea:valid:not(:placeholder-shown) {
+    border-color: var(--primary-green);
+}
+
+.helper-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: var(--gray);
+    font-style: italic;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ===========================
+   File Upload Styling
+   =========================== */
+
+.file-input-wrapper {
+    position: relative;
+}
+
+.file-input-wrapper input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: 2px dashed var(--gray);
+    border-radius: 10px;
+    background: var(--light-gray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.file-label:hover {
+    border-color: var(--primary-green);
+    background: rgba(46, 125, 50, 0.05);
+}
+
+.file-label i {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+.file-label span {
+    color: var(--dark-gray);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.file-label small {
+    color: var(--gray);
+    font-size: 0.85rem;
+}
+
+.file-name {
+    display: block;
+    margin-top: 10px;
+    color: var(--primary-green);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   Payment Confirmation Box
+   =========================== */
+
+.payment-confirmation-box {
+    background: #E8F5E9;
+    border: 2px solid var(--primary-green);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.payment-confirmation-box h3 {
+    color: var(--primary-green);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.payment-info {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.payment-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.payment-amount strong {
+    font-size: 1.8rem;
+    color: var(--primary-red);
+}
+
+.payment-description {
+    color: var(--dark-gray);
+    line-height: 1.8;
+}
+
+/* ===========================
+   Documents Upload Section
+   =========================== */
+
+.documents-upload-section {
+    margin-top: 40px;
+}
+
+.documents-upload-section h3 {
+    color: var(--black);
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.documents-upload-section h4 {
+    color: var(--black);
+    margin: 30px 0 20px;
+    font-size: 1.2rem;
+}
+
+.upload-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.upload-grid.optional-docs {
+    border-top: 2px dashed var(--light-gray);
+    padding-top: 30px;
+}
+
+/* ===========================
+   Summary Section
+   =========================== */
+
+.summary-section {
+    background: var(--light-gray);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.summary-block {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--primary-green);
+}
+
+.summary-block h3 {
+    color: var(--primary-green);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-label {
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.summary-value {
+    color: var(--black);
+    text-align: right;
+}
+
+/* ===========================
+   Terms & Checkboxes
+   =========================== */
+
+.terms-section {
+    background: #FFF9E6;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-weight: 400;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.checkbox-group label a {
+    color: var(--primary-green);
+    text-decoration: underline;
+}
+
+.checkbox-group label a:hover {
+    color: var(--primary-red);
+}
+
+/* ===========================
+   Final Note
+   =========================== */
+
+.final-note {
+    background: #E3F2FD;
+    border-left: 4px solid #2196F3;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.final-note i {
+    color: #2196F3;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.final-note p {
+    color: var(--dark-gray);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ===========================
+   Form Navigation
+   =========================== */
+
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 30px;
+    border-top: 2px solid var(--light-gray);
+}
+
+.form-navigation .btn {
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 180px;
+    justify-content: center;
+}
+
+.btn-submit {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 20px 40px;
+}
+
+/* ===========================
+   Success Modal
+   =========================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 50px;
+    border-radius: 16px;
+    max-width: 600px;
+    text-align: center;
+    animation: modalSlideUp 0.5s ease;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes modalSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-icon.success {
+    background: var(--primary-green);
+    animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.modal-icon i {
+    font-size: 4rem;
+    color: var(--white);
+}
+
+.modal-content h2 {
+    color: var(--black);
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.modal-content p {
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.application-number {
+    background: var(--light-gray);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.application-number span {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.application-number strong {
+    color: var(--primary-green);
+    font-size: 1.8rem;
+    font-family: 'Courier New', monospace;
+}
+
+.modal-text {
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+.modal-content .btn {
+    margin-top: 20px;
+    min-width: 200px;
+}
+
+/* ===========================
+   Loading State
+   =========================== */
+
+.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--light-gray);
+    border-top-color: var(--primary-green);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+@media (max-width: 968px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-steps {
+        gap: 10px;
+    }
+
+    .progress-step span {
+        font-size: 0.75rem;
+    }
+
+    .step-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .notice-card {
+        flex-direction: column;
+    }
+
+    .upload-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .application-hero {
+        padding: 60px 0 40px;
+    }
+
+    .hero-icon {
+        font-size: 3rem;
+    }
+
+    .hero-content-app h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content-app p {
+        font-size: 1rem;
+    }
+
+    .form-step {
+        padding: 30px 20px;
+    }
+
+    .step-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-navigation {
+        flex-direction: column;
+    }
+
+    .form-navigation .btn {
+        width: 100%;
+    }
+
+    .progress-steps {
+        flex-wrap: wrap;
+    }
+
+    .progress-step {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .modal-content {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+
+    .application-number strong {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .notice-card {
+        padding: 20px;
+    }
+
+    .payment-amount {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .methods {
+        flex-direction: column;
+    }
+
+    .method {
+        text-align: center;
+    }
+
+    .file-label {
+        padding: 20px;
+    }
+
+    .file-label i {
+        font-size: 2rem;
+    }
+}
