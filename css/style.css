@@ -137,7 +137,7 @@ img {
 }
 
 .logo img {
-    height: 85px;
+    height: 60px;
     width: auto;
 }
 
@@ -159,6 +159,21 @@ img {
 .nav-list a:hover {
     color: var(--primary-green);
     background: rgba(46, 125, 50, 0.1);
+}
+
+.nav-list a.apply-link {
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-red));
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-list a.apply-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
+    background: linear-gradient(135deg, var(--dark-green), var(--dark-red));
 }
 
 .mobile-toggle {
