@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Liste complète des universités chinoises partenaires de LCB-SCHOLAR avec programmes et bourses disponibles">
+    <title>Universités Partenaires - Programmes & Bourses | LCB-SCHOLAR</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/universities.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Toggle Button -->
+    <div class="language-toggle">
+        <button id="langToggle" class="lang-btn">
+            <i class="fas fa-globe"></i>
+            <span id="currentLang">FR</span> / <span id="alternateLang">EN</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://www.genspark.ai/api/files/s/nfwJxH7L" alt="LCB-SCHOLAR Logo">
+                    </a>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                        <li><a href="index.html#about" data-fr="À Propos" data-en="About">À Propos</a></li>
+                        <li><a href="index.html#process" data-fr="Processus" data-en="Process">Processus</a></li>
+                        <li><a href="universities.html" class="active" data-fr="Universités" data-en="Universities">Universités</a></li>
+                        <li><a href="application.html" data-fr="📝 Candidater" data-en="📝 Apply">📝 Candidater</a></li>
+                        <li><a href="index.html#faq" data-fr="FAQ" data-en="FAQ">FAQ</a></li>
+                        <li><a href="index.html#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Universities Hero -->
+    <section class="universities-hero">
+        <div class="container">
+            <div class="hero-content-uni">
+                <i class="fas fa-university hero-icon"></i>
+                <h1 data-fr="Nos Universités Partenaires" data-en="Our Partner Universities">Nos Universités Partenaires</h1>
+                <p data-fr="Découvrez toutes les universités chinoises avec lesquelles nous travaillons, leurs programmes et les bourses disponibles" 
+                   data-en="Discover all Chinese universities we work with, their programs and available scholarships">
+                    Découvrez toutes les universités chinoises avec lesquelles nous travaillons, leurs programmes et les bourses disponibles
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all" data-fr="Toutes (11)" data-en="All (11)">Toutes (11)</button>
+                <button class="filter-btn" data-filter="top-tier" data-fr="Top Tier (5)" data-en="Top Tier (5)">Top Tier (5)</button>
+                <button class="filter-btn" data-filter="accessible" data-fr="Accessibles (5)" data-en="Accessible (5)">Accessibles (5)</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Universities Grid -->
+    <section class="universities-grid-section">
+        <div class="container">
+            <!-- TOP TIER HEADER -->
+            <div class="section-divider top-tier" data-category="top-tier">
+                <h2 data-fr="🏆 Universités de Premier Plan" data-en="🏆 Top-Tier Universities">🏆 Universités de Premier Plan</h2>
+                <p data-fr="Classées mondialement, excellence académique reconnue" data-en="Globally ranked, recognized academic excellence">Classées mondialement, excellence académique reconnue</p>
+            </div>
+
+            <!-- TOP TIER UNIVERSITIES (will be populated by JavaScript) -->
+            <div id="topTierUniversities" class="universities-grid"></div>
+
+            <!-- ACCESSIBLE HEADER -->
+            <div class="section-divider accessible" data-category="accessible">
+                <h2 data-fr="💰 Universités Accessibles & Abordables" data-en="💰 Accessible & Affordable Universities">💰 Universités Accessibles & Abordables</h2>
+                <p data-fr="Excellente qualité avec frais modérés" data-en="Excellent quality with moderate fees">Excellente qualité avec frais modérés</p>
+            </div>
+
+            <!-- ACCESSIBLE UNIVERSITIES (will be populated by JavaScript) -->
+            <div id="accessibleUniversities" class="universities-grid"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2 data-fr="Prêt à postuler ?" data-en="Ready to apply?">Prêt à postuler ?</h2>
+                <p data-fr="Contactez-nous pour une consultation gratuite et découvrez quelles universités correspondent à votre profil" 
+                   data-en="Contact us for a free consultation and discover which universities match your profile">
+                    Contactez-nous pour une consultation gratuite et découvrez quelles universités correspondent à votre profil
+                </p>
+                <div class="cta-buttons">
+                    <a href="application.html" class="btn btn-primary" data-fr="📝 Candidater maintenant" data-en="📝 Apply now">📝 Candidater maintenant</a>
+                    <a href="index.html#contact" class="btn btn-secondary" data-fr="📞 Nous contacter" data-en="📞 Contact us">📞 Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 data-fr="À Propos de LCB-SCHOLAR" data-en="About LCB-SCHOLAR">À Propos de LCB-SCHOLAR</h3>
+                    <p data-fr="Votre partenaire de confiance pour obtenir des bourses d'études en Chine. Accompagnement complet de A à Z : Dossier, Admission, Visa, Installation." 
+                       data-en="Your trusted partner to obtain scholarships in China. Complete A to Z support: Application, Admission, Visa, Installation.">
+                        Votre partenaire de confiance pour obtenir des bourses d'études en Chine. Accompagnement complet de A à Z : Dossier, Admission, Visa, Installation.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h3 data-fr="Liens Rapides" data-en="Quick Links">Liens Rapides</h3>
+                    <ul>
+                        <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                        <li><a href="index.html#about" data-fr="À Propos" data-en="About">À Propos</a></li>
+                        <li><a href="index.html#process" data-fr="Processus" data-en="Process">Processus</a></li>
+                        <li><a href="universities.html" data-fr="Universités" data-en="Universities">Universités</a></li>
+                        <li><a href="index.html#faq" data-fr="FAQ" data-en="FAQ">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 data-fr="Contact" data-en="Contact">Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> lcbscholar@gmail.com</li>
+                        <li><i class="fab fa-telegram"></i> +86 19708192857</li>
+                        <li><i class="fab fa-whatsapp"></i> +86 18652659785</li>
+                        <li><i class="fab fa-whatsapp"></i> +86 17539192966</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Guangzhou, Chine</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 LCB-SCHOLAR. <span data-fr="Tous droits réservés." data-en="All rights reserved.">Tous droits réservés.</span></p>
+                <p data-fr="Fait avec ❤️ pour les étudiants africains" data-en="Made with ❤️ for African students">Fait avec ❤️ pour les étudiants africains</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/universities-database.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/universities.js"></script>
+</body>
+</html>
